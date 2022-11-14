@@ -1,0 +1,72 @@
+﻿@inject Nop.Core.IWebHelper webHelper
+@inject INopHtmlHelper NopHtml
+@{
+    Layout = "_ColumnsOne";
+
+
+    NopHtml.AppendScriptParts(ResourceLocation.Footer, "~/lib/font-awesome/js/all.js");
+    NopHtml.AppendScriptParts(ResourceLocation.Head, "~/Plugins/Invoice/Content/js/devextreme/aspnet/dx.aspnet.data.js");
+    NopHtml.AppendScriptParts(ResourceLocation.Head, "~/Plugins/Invoice/Content/js/devextreme/aspnet/dx.aspnet.mvc.js");
+    NopHtml.AppendScriptParts(ResourceLocation.Head, "~/Plugins/Invoice/Content/js/devextreme/dx.all.js");
+    NopHtml.AppendScriptParts(ResourceLocation.Head, "~/Plugins/Invoice/Content/js/devextreme/bootstrap.js");
+    NopHtml.AppendScriptParts(ResourceLocation.Head, "~/Plugins/Invoice/Content/js/InvoiceSell.js");
+
+    NopHtml.AppendCssFileParts("~/Plugins/Invoice/Content/css/devextreme/Charset.css");
+    NopHtml.AppendCssFileParts("~/Plugins/Invoice/Content/css/devextreme/bootstrap.css");
+    NopHtml.AppendCssFileParts("~/Plugins/Invoice/Content/css/devextreme/dx.common.css");
+    NopHtml.AppendCssFileParts("~/Plugins/Invoice/Content/css/devextreme/dx.light.css");
+}
+
+<div>
+    
+    @(Html.DevExtreme().Button().ID("submitButton").Text("Create").OnClick("CreateInvoiceSell"))
+    
+    <hr/>
+
+    @(Html
+        .DevExtreme()
+        .DataGrid<InvoiceSell>()
+        .ShowBorders(true)
+        .DataSource(d=>
+                    d.Mvc()
+                        .Controller("Invoice")
+                        .LoadAction(nameof(InvoiceController.GetInvoiceSells))
+                        .Key(nameof(InvoiceSell.invoiceNo))
+                    )
+        .Editing(option => option.UseIcons(true))
+        .Columns(cols =>
+        {
+            cols.AddFor(x => x.invoiceNo);
+            cols.AddFor(x => x.buildingNo);
+            cols.AddFor(x => x.aName);
+            cols.AddFor(x => x.eName);
+            cols.AddFor(x => x.dateH);
+            cols.AddFor(x => x.dateG);
+            cols.AddFor(x => x.mainContact1);
+            cols.AddFor(x => x.invoiceVATID);
+
+            cols.Add()
+                .Name("editRow")
+                .Alignment(HorizontalAlignment.Center)
+                .DataField(nameof(InvoiceSell.invoiceNo))
+                .CellTemplate(new JS("cellEditLink"));
+
+        })
+        .Paging             (p => p.PageSize(10))
+        .FilterRow          (f => f.Visible(true))
+        .HeaderFilter       (h => h.Visible(true))
+        .RemoteOperations   (true)
+        )
+
+</div>
+ 
+<script>
+    function cellEditLink(cellElement, cellInfo) {
+        $('<a/>')
+            .attr({
+                href: '@Url.RouteUrl("default", new { action = nameof(InvoiceController.Create), controller = "Invoice" })' + '?invoiceNo=' + cellInfo.data.invoiceNo
+            })
+            .html("<i class='fas fa-pen'></i>")
+            .appendTo(cellElement);
+    };  
+</script>

@@ -1,0 +1,726 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+	  <OutputPath>..\..\Presentation\Nop.Web\Plugins\Invoice</OutputPath>
+	  <OutDir>$(OutputPath)</OutDir>
+	  <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	  <AssemblyVersion>1.0.200.0</AssemblyVersion>
+	  <FileVersion>1.0.200.0</FileVersion>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Content\css\devextreme\bootstrap.css" />
+    <None Remove="Content\css\devextreme\bootstrap.min.css" />
+    <None Remove="Content\css\devextreme\Charset.css" />
+    <None Remove="Content\css\devextreme\dx-diagram.css" />
+    <None Remove="Content\css\devextreme\dx-diagram.min.css" />
+    <None Remove="Content\css\devextreme\dx-gantt.css" />
+    <None Remove="Content\css\devextreme\dx-gantt.min.css" />
+    <None Remove="Content\css\devextreme\dx.carmine.compact.css" />
+    <None Remove="Content\css\devextreme\dx.carmine.css" />
+    <None Remove="Content\css\devextreme\dx.common.css" />
+    <None Remove="Content\css\devextreme\dx.contrast.compact.css" />
+    <None Remove="Content\css\devextreme\dx.contrast.css" />
+    <None Remove="Content\css\devextreme\dx.dark.compact.css" />
+    <None Remove="Content\css\devextreme\dx.dark.css" />
+    <None Remove="Content\css\devextreme\dx.darkmoon.compact.css" />
+    <None Remove="Content\css\devextreme\dx.darkmoon.css" />
+    <None Remove="Content\css\devextreme\dx.darkviolet.compact.css" />
+    <None Remove="Content\css\devextreme\dx.darkviolet.css" />
+    <None Remove="Content\css\devextreme\dx.greenmist.compact.css" />
+    <None Remove="Content\css\devextreme\dx.greenmist.css" />
+    <None Remove="Content\css\devextreme\dx.light.compact.css" />
+    <None Remove="Content\css\devextreme\dx.light.css" />
+    <None Remove="Content\css\devextreme\dx.material.blue.dark.compact.css" />
+    <None Remove="Content\css\devextreme\dx.material.blue.dark.css" />
+    <None Remove="Content\css\devextreme\dx.material.blue.light.compact.css" />
+    <None Remove="Content\css\devextreme\dx.material.blue.light.css" />
+    <None Remove="Content\css\devextreme\dx.material.lime.dark.compact.css" />
+    <None Remove="Content\css\devextreme\dx.material.lime.dark.css" />
+    <None Remove="Content\css\devextreme\dx.material.lime.light.compact.css" />
+    <None Remove="Content\css\devextreme\dx.material.lime.light.css" />
+    <None Remove="Content\css\devextreme\dx.material.orange.dark.compact.css" />
+    <None Remove="Content\css\devextreme\dx.material.orange.dark.css" />
+    <None Remove="Content\css\devextreme\dx.material.orange.light.compact.css" />
+    <None Remove="Content\css\devextreme\dx.material.orange.light.css" />
+    <None Remove="Content\css\devextreme\dx.material.purple.dark.compact.css" />
+    <None Remove="Content\css\devextreme\dx.material.purple.dark.css" />
+    <None Remove="Content\css\devextreme\dx.material.purple.light.compact.css" />
+    <None Remove="Content\css\devextreme\dx.material.purple.light.css" />
+    <None Remove="Content\css\devextreme\dx.material.teal.dark.compact.css" />
+    <None Remove="Content\css\devextreme\dx.material.teal.dark.css" />
+    <None Remove="Content\css\devextreme\dx.material.teal.light.compact.css" />
+    <None Remove="Content\css\devextreme\dx.material.teal.light.css" />
+    <None Remove="Content\css\devextreme\dx.softblue.compact.css" />
+    <None Remove="Content\css\devextreme\dx.softblue.css" />
+    <None Remove="Content\css\devextreme\fonts\Roboto-300.ttf" />
+    <None Remove="Content\css\devextreme\fonts\Roboto-300.woff" />
+    <None Remove="Content\css\devextreme\fonts\Roboto-300.woff2" />
+    <None Remove="Content\css\devextreme\fonts\Roboto-400.ttf" />
+    <None Remove="Content\css\devextreme\fonts\Roboto-400.woff" />
+    <None Remove="Content\css\devextreme\fonts\Roboto-400.woff2" />
+    <None Remove="Content\css\devextreme\fonts\Roboto-500.ttf" />
+    <None Remove="Content\css\devextreme\fonts\Roboto-500.woff" />
+    <None Remove="Content\css\devextreme\fonts\Roboto-500.woff2" />
+    <None Remove="Content\css\devextreme\fonts\Roboto-700.ttf" />
+    <None Remove="Content\css\devextreme\fonts\Roboto-700.woff" />
+    <None Remove="Content\css\devextreme\fonts\Roboto-700.woff2" />
+    <None Remove="Content\css\devextreme\icons\dxicons.ttf" />
+    <None Remove="Content\css\devextreme\icons\dxicons.woff" />
+    <None Remove="Content\css\devextreme\icons\dxicons.woff2" />
+    <None Remove="Content\css\devextreme\icons\dxiconsmaterial.ttf" />
+    <None Remove="Content\css\devextreme\icons\dxiconsmaterial.woff" />
+    <None Remove="Content\css\devextreme\icons\dxiconsmaterial.woff2" />
+    <None Remove="Content\js\devextreme\aspnet\dx.aspnet.data.js" />
+    <None Remove="Content\js\devextreme\aspnet\dx.aspnet.mvc.js" />
+    <None Remove="Content\js\devextreme\bootstrap.js" />
+    <None Remove="Content\js\devextreme\bootstrap.min.js" />
+    <None Remove="Content\js\devextreme\cldr.js" />
+    <None Remove="Content\js\devextreme\cldr.min.js" />
+    <None Remove="Content\js\devextreme\cldr\event.js" />
+    <None Remove="Content\js\devextreme\cldr\event.min.js" />
+    <None Remove="Content\js\devextreme\cldr\supplemental.js" />
+    <None Remove="Content\js\devextreme\cldr\supplemental.min.js" />
+    <None Remove="Content\js\devextreme\cldr\unresolved.js" />
+    <None Remove="Content\js\devextreme\cldr\unresolved.min.js" />
+    <None Remove="Content\js\devextreme\dx-diagram.js" />
+    <None Remove="Content\js\devextreme\dx-diagram.min.js" />
+    <None Remove="Content\js\devextreme\dx-gantt.js" />
+    <None Remove="Content\js\devextreme\dx-gantt.min.js" />
+    <None Remove="Content\js\devextreme\dx-quill.js" />
+    <None Remove="Content\js\devextreme\dx-quill.min.js" />
+    <None Remove="Content\js\devextreme\dx.all.debug.js" />
+    <None Remove="Content\js\devextreme\dx.all.js" />
+    <None Remove="Content\js\devextreme\dx.viz.debug.js" />
+    <None Remove="Content\js\devextreme\dx.viz.js" />
+    <None Remove="Content\js\devextreme\dx.web.debug.js" />
+    <None Remove="Content\js\devextreme\dx.web.js" />
+    <None Remove="Content\js\devextreme\exceljs.js" />
+    <None Remove="Content\js\devextreme\exceljs.min.js" />
+    <None Remove="Content\js\devextreme\FileSaver.js" />
+    <None Remove="Content\js\devextreme\FileSaver.min.js" />
+    <None Remove="Content\js\devextreme\globalize.js" />
+    <None Remove="Content\js\devextreme\globalize.min.js" />
+    <None Remove="Content\js\devextreme\globalize\currency.js" />
+    <None Remove="Content\js\devextreme\globalize\currency.min.js" />
+    <None Remove="Content\js\devextreme\globalize\date.js" />
+    <None Remove="Content\js\devextreme\globalize\date.min.js" />
+    <None Remove="Content\js\devextreme\globalize\message.js" />
+    <None Remove="Content\js\devextreme\globalize\message.min.js" />
+    <None Remove="Content\js\devextreme\globalize\number.js" />
+    <None Remove="Content\js\devextreme\globalize\number.min.js" />
+    <None Remove="Content\js\devextreme\jquery.js" />
+    <None Remove="Content\js\devextreme\jquery.min.js" />
+    <None Remove="Content\js\devextreme\jspdf.plugin.autotable.js" />
+    <None Remove="Content\js\devextreme\jspdf.plugin.autotable.min.js" />
+    <None Remove="Content\js\devextreme\jspdf.umd.js" />
+    <None Remove="Content\js\devextreme\jspdf.umd.min.js" />
+    <None Remove="Content\js\devextreme\jszip.js" />
+    <None Remove="Content\js\devextreme\jszip.min.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.ar.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.cs.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.de.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.el.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.en.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.es.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.fi.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.fr.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.hu.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.it.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.ja.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.nb.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.nl.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.pt.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.ro.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.ru.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.sl.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.sv.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.tr.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.vi.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.zh-tw.js" />
+    <None Remove="Content\js\devextreme\localization\dx.messages.zh.js" />
+    <None Remove="Content\js\devextreme\vectormap-data\africa.js" />
+    <None Remove="Content\js\devextreme\vectormap-data\canada.js" />
+    <None Remove="Content\js\devextreme\vectormap-data\eurasia.js" />
+    <None Remove="Content\js\devextreme\vectormap-data\europe.js" />
+    <None Remove="Content\js\devextreme\vectormap-data\usa.js" />
+    <None Remove="Content\js\devextreme\vectormap-data\world.js" />
+    <None Remove="Content\js\devextreme\vectormap-utils\dx.vectormaputils.debug.js" />
+    <None Remove="Content\js\devextreme\vectormap-utils\dx.vectormaputils.js" />
+    <None Remove="Content\js\devextreme\vectormap-utils\dx.vectormaputils.node.js" />
+    <None Remove="Content\js\InvoiceSell.js" />
+    <None Remove="plugin.json" />
+    <None Remove="Views\Configure.cshtml" />
+    <None Remove="Views\Create.cshtml" />
+    <None Remove="Views\Index.cshtml" />
+    <None Remove="Views\_ViewImports.cshtml" />
+  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Presentation\Nop.Web.Framework\Nop.Web.Framework.csproj" />
+		<ProjectReference Include="..\..\Presentation\Nop.Web\Nop.Web.csproj" />
+		<ClearPluginAssemblies Include="$(MSBuildProjectDirectory)\..\..\Build\ClearPluginAssemblies.proj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="Content\css\devextreme\bootstrap.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\bootstrap.min.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\Charset.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx-diagram.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx-diagram.min.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx-gantt.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx-gantt.min.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.carmine.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.carmine.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.common.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.contrast.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.contrast.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.dark.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.dark.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.darkmoon.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.darkmoon.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.darkviolet.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.darkviolet.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.greenmist.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.greenmist.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.light.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.light.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.blue.dark.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.blue.dark.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.blue.light.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.blue.light.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.lime.dark.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.lime.dark.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.lime.light.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.lime.light.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.orange.dark.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.orange.dark.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.orange.light.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.orange.light.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.purple.dark.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.purple.dark.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.purple.light.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.purple.light.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.teal.dark.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.teal.dark.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.teal.light.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.material.teal.light.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.softblue.compact.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\dx.softblue.css">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\fonts\Roboto-300.ttf">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\fonts\Roboto-300.woff">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\fonts\Roboto-300.woff2">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\fonts\Roboto-400.ttf">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\fonts\Roboto-400.woff">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\fonts\Roboto-400.woff2">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\fonts\Roboto-500.ttf">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\fonts\Roboto-500.woff">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\fonts\Roboto-500.woff2">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\fonts\Roboto-700.ttf">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\fonts\Roboto-700.woff">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\fonts\Roboto-700.woff2">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\icons\dxicons.ttf">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\icons\dxicons.woff">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\icons\dxicons.woff2">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\icons\dxiconsmaterial.ttf">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\icons\dxiconsmaterial.woff">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\css\devextreme\icons\dxiconsmaterial.woff2">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\aspnet\dx.aspnet.data.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\aspnet\dx.aspnet.mvc.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\bootstrap.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\bootstrap.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\cldr.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\cldr.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\cldr\event.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\cldr\event.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\cldr\supplemental.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\cldr\supplemental.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\cldr\unresolved.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\cldr\unresolved.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\dx-diagram.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\dx-diagram.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\dx-gantt.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\dx-gantt.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\dx-quill.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\dx-quill.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\dx.all.debug.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\dx.all.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\dx.viz.debug.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\dx.viz.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\dx.web.debug.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\dx.web.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\exceljs.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\exceljs.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\FileSaver.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\FileSaver.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\globalize.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\globalize.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\globalize\currency.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\globalize\currency.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\globalize\date.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\globalize\date.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\globalize\message.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\globalize\message.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\globalize\number.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\globalize\number.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\jquery.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\jquery.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\jspdf.plugin.autotable.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\jspdf.plugin.autotable.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\jspdf.umd.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\jspdf.umd.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\jszip.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\jszip.min.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.ar.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.cs.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.de.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.el.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.en.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.es.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.fi.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.fr.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.hu.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.it.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.ja.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.nb.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.nl.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.pt.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.ro.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.ru.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.sl.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.sv.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.tr.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.vi.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.zh-tw.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\localization\dx.messages.zh.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\vectormap-data\africa.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\vectormap-data\canada.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\vectormap-data\eurasia.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\vectormap-data\europe.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\vectormap-data\usa.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\vectormap-data\world.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\vectormap-utils\dx.vectormaputils.debug.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\vectormap-utils\dx.vectormaputils.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\devextreme\vectormap-utils\dx.vectormaputils.node.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\js\InvoiceSell.js">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="plugin.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Views\Create.cshtml">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Views\Index.cshtml">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Views\Configure.cshtml">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Views\_ViewImports.cshtml">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="DevExtreme.AspNet.Core" Version="22.1.6" />
+	  <PackageReference Include="DevExtreme.AspNet.Data" Version="2.8.6" />
+	</ItemGroup>
+	<!-- This target execute after "Build" target -->
+	<Target Name="NopTarget" AfterTargets="Build">
+		<!-- Delete unnecessary libraries from plugins path -->
+		<MSBuild Projects="@(ClearPluginAssemblies)" Properties="PluginPath=$(MSBuildProjectDirectory)\$(OutDir)" Targets="NopClear" />
+	</Target>
+</Project>

@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Invoice",
+  "FriendlyName": "Invoice Management",
+  "SystemName": "Invoice",
+  "Version": "1.1",
+  "SupportedVersions": [ "4.50" ],
+  "Author": "Vais Sobhani",
+  "DisplayOrder": 5,
+  "FileName": "Nop.Plugin.Invoice.dll",
+  "Description": "This plugin enables invoice managment."
+}
