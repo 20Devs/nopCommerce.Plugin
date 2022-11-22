@@ -3,8 +3,10 @@ This project contains a plugin for nopCommerce. The plugin was developed by DevE
 The plugin's duty is to manage invoice sales. CRUD operations of InvoiceSell and InvoiceSellUnit perform in it. 
 
 I recorded this video to show a demo of how the plugin works.
+
 Video : 
-Folder :
+
+Folder :  [Link To Folder](https://github.com/20Devs/nopCommerce.Plugin/tree/main/nopCommerce_4.50.4_Source/Plugins/Nop.Plugin.Invoice)
 
 
 the techniques that I used to develop the plugin are:
@@ -16,6 +18,4 @@ the techniques that I used to develop the plugin are:
 - Migrations and Class Mappings in nopCommerce Plugins
 - Handling menu items into the administration area from a plugins
 - Installing and updating plugins in nopCommerce
-- ViewModel Validation in plugins
-
-Some Other concepts of DevExtreme DataGrid that I use to develop Frontend.
+- ViewModel Validation in plugins 
