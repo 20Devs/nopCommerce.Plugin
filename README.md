@@ -1,6 +1,11 @@
 # nopCommerce Complete Plugin
 This project contains a plugin for nopCommerce. The plugin was developed by DevExtreme Asp.Net Core components, especially with DataGrid via deep dive into its events on adding or deleting rows.
-The plugin's duty is to manage invoice sales. CRUD operations of InvoiceSell and InvoiceSellUnit perform in it. I recorded this video to show a demo of how the plugin works.
+The plugin's duty is to manage invoice sales. CRUD operations of InvoiceSell and InvoiceSellUnit perform in it. 
+
+I recorded this video to show a demo of how the plugin works.
+Video : 
+Folder :
+
 
 the techniques that I used to develop the plugin are:
 
