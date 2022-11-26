@@ -4,7 +4,7 @@ The plugin's duty is to manage invoice sales. CRUD operations of InvoiceSell and
 
 I recorded this video to show a demo of how the plugin works.
 
-Video : 
+Video : [YouTube Link](https://youtu.be/34xhzo4kz8Y)
 
 Folder :  [Link To Folder](https://github.com/20Devs/nopCommerce.Plugin/tree/main/nopCommerce_4.50.4_Source/Plugins/Nop.Plugin.Invoice)
 
