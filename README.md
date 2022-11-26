@@ -21,4 +21,5 @@ the techniques that I used to develop the plugin are:
 - ViewModel Validation in plugins 
 
 nopCommerce is an open source project with interesting design patterns that can be very informative for .NET programmers.This project can be enjoyable for those who have experience with modularizing applications and creating plugins (Modular Monolothic).
+
 As with other projects, some ideas can make changes to improve the performance and development, for example, by adding Domain Centric concepts such as DDD, you can strengthen its domain layer. by preventing bundling and minification during debugging, plugin development could be faster for programmers and reduced costs in the development process.
